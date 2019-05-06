@@ -68,6 +68,7 @@ class MaxPoolBiLSTM:
         encoding = Dropout(self.encoding_dropout, name=self.name)(encoding)
         return encoding, seq_input
 
+# TODO: DEBUG !!! Val Loss not decreasing
 # TODO: Add support for other encoder architectures (LSTM, GRU, BiGRU, BiLSTM-Mean, Self-Attentive, Hier-Conv)
 # TODO: Add support for non-linear final classification and multi-hidden layers post encoding
 class NLIClassifier:
