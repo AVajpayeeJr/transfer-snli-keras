@@ -1,0 +1,23 @@
+data:
+    nli_data_dir: data/SNLI/
+    embeddings_path: data/WordEmbeddings/glove.840B.300d.txt
+    num_train_samples: 100000
+    num_dev_samples: 1000
+    num_test_samples: 1000
+model:
+    encoder:
+        type: BiLSTM-Max
+        word_embedding_dim: 300
+        encoding_dropout: 0.0
+        BiLSTM-Max:
+            lstm_unit_dim: 512
+    classification:
+        hidden_units: 512
+        dropout: 0.0
+    training:
+        optimizer: adam
+        clipnorm: 5.0
+        batch_size: 100
+        epochs: 5
+        init_lr: 0.1
+    path: 'saved_models/100000/'
